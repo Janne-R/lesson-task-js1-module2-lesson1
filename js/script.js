@@ -56,3 +56,35 @@ setTimeout(logMessage, numberOfSeconds * 1000);
 //question 4
 /*Write code that logs the numbers 1 to 4 every 1.5 seconds and then stops.*/
 
+let count = 0;
+
+const intervalId = setInterval(function () {
+
+  count++;
+
+  if (count === 4) {
+    clearInterval(intervalId);
+  }
+
+  console.log(count);
+}, 1500);
+
+//fasit
+const interval = 1500;
+let count = 0;
+const limit = 4;
+
+function logNumber() {
+  // increase count's value by 1
+  count++;
+
+  // log count's current value
+  console.log(count);
+
+  // check whether to clear the setInterval
+  if (count === limit) {
+    clearInterval(intervalId);
+  }
+}
+
+const intervalId = setInterval(logNumber, interval);
